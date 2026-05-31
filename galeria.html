@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <!--
+      GALERIA (galeria.html)
+      - Mostra screenshots/conceitos do jogo.
+      - As imagens abrem em um modal (lightbox) via JS.
+      - Você pode substituir os <img src="..."> por imagens reais em assets/img/.
+    -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="theme-color" content="#0b0d10" />
+    <title>Projeto do Jogo | Galeria</title>
+    <link rel="stylesheet" href="./style.css" />
+    <script defer src="./assets/js/main.js"></script>
+  </head>
+
+  <body>
+    <header class="topbar" data-topbar>
+      <div class="container topbar__inner">
+        <a class="brand" href="./index.html" data-nav-link>
+          <img class="brand__logo" src="./assets/img/logo.png" alt="Logo do jogo" width="38" height="38" />
+          <span class="brand__text">
+            <span class="brand__title">M.V.O.S. (Meu Vovô Odeia Sujeira)</span>
+            <span class="brand__tag">Galeria de fotos</span>
+          </span>
+        </a>
+
+        <button class="nav__toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="nav">
+          Menu
+        </button>
+
+        <nav id="nav" class="nav" aria-label="Navegação principal">
+          <a href="./index.html" data-nav-link>Home</a>
+          <a href="./galeria.html" aria-current="page" data-nav-link>Galeria</a>
+          <a href="./sobre.html" data-nav-link>Sobre</a>
+          <a href="./jogar.html" data-nav-link>Jogar</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="section">
+        <div class="container">
+          <header class="section__head reveal">
+            <h1 class="section__title" style="font-size:28px; margin:0;">Galeria</h1>
+            <p class="section__hint">Clique em uma imagem para ampliar</p>
+          </header>
+
+          <!--
+            ITENS DA GALERIA
+            - Cada .shot tem data-shot para abrir no lightbox.
+            - Troque as imagens "placeholder" por arquivos reais, ex.:
+              src="./assets/img/fase1.png"
+          -->
+          <div class="gallery reveal" aria-label="Galeria de imagens">
+            <div class="shot" data-shot tabindex="0" role="button" aria-label="Ampliar imagem: Corredor">
+              <img
+                src="./assets/img/logo.png" width="1280" height="720"
+                alt="Corredor (placeholder)"
+              />
+              <span class="shot__label">Logo</span>
+            </div>
+
+            <div class="shot" data-shot tabindex="0" role="button" aria-label="Ampliar imagem: Sala escura">
+              <img
+                src="./assets/img/a.png" width="1280" height="720"
+                alt="Sala escura (placeholder)"
+              />
+              <span class="shot__label">Painel 1</span>
+            </div>
+
+            <div class="shot" data-shot tabindex="0" role="button" aria-label="Ampliar imagem: Pistas">
+              <img
+                src="./assets/img/demo.png" width="1280" height="720"
+                alt="Pistas (placeholder)"
+              />
+              <span class="shot__label">Gameplay</span>
+            </div>
+
+            <div class="shot" data-shot tabindex="0" role="button" aria-label="Ampliar imagem: Personagem">
+              <img
+                src="./assets/img/Painel1.png" width="1280" height="720"
+                alt="Personagem (placeholder)"
+              />
+              <span class="shot__label">Painel 2</span>
+            </div>
+
+            <div class="shot" data-shot tabindex="0" role="button" aria-label="Ampliar imagem: Interface">
+              <img
+                src="./assets/img/Painel2.png" width="1280" height="720"
+                alt="Interface (placeholder)"
+              />
+              <span class="shot__label">Painel 3</span>
+            </div>
+
+            <div class="shot" data-shot tabindex="0" role="button" aria-label="Ampliar imagem: Cena final">
+              <img
+                src="./assets/img/Painel3.png" width="1280" height="720"
+                alt="Cena final (placeholder)"
+              />
+              <span class="shot__label">Cena final</span>
+            </div>
+          </div>
+
+          <article class="card card--padded reveal" style="margin-top:14px;">
+            <h2 class="section__title" style="margin:0 0 8px;">Galeria de fotos</h2>
+            <div class="prose">
+              <p style="margin:0;">
+                Galeria de imagens do jogo, incluindo screenshots, artes conceituais e outros visuais relacionados ao desenvolvimento. Clique em cada imagem para ver detalhes e ampliar. Use esta seção para mostrar a evolução visual do seu projeto e destacar elementos importantes do design.
+              </p>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <!--
+      LIGHTBOX (Modal)
+      - O JS procura por data-lightbox e controla abrir/fechar.
+    -->
+    <div class="lightbox" data-lightbox role="dialog" aria-modal="true" aria-label="Visualização de imagem">
+      <div class="lightbox__panel">
+        <div class="lightbox__bar">
+          <p class="lightbox__title" data-lightbox-title>Imagem</p>
+          <button class="icon-btn" type="button" data-lightbox-close aria-label="Fechar">
+            Fechar
+          </button>
+        </div>
+        <div class="lightbox__media">
+          <img data-lightbox-img alt="" />
+        </div>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <div class="container footer__grid">
+        <div>
+          <div><b>M.V.O.S. (Meu Vovô Odeia Sujeira)</b> — Galeria</div>
+          <div style="margin-top:6px;">Dica: use prints do jogo e artes conceituais.</div>
+        </div>
+        <div>
+          <a class="btn" href="./jogar.html">Jogar</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
+

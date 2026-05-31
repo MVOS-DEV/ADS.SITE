@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <!--
+      JOGAR (jogar.html)
+      - Área do jogo rodando (iframe) + botão de download + tutorial.
+      - Para funcionar com Construct 3:
+        1) Exporte seu jogo como "Web (HTML5)"
+        2) Coloque os arquivos exportados dentro da pasta /game/c3/
+        3) Garanta que exista /game/c3/index.html
+        4) NÃO substitua o index.html da raiz do site (senão abre só o jogo)
+    -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="theme-color" content="#0b0d10" />
+    <title>Projeto do Jogo | Jogar</title>
+    <link rel="stylesheet" href="./style.css" />
+    <script defer src="./assets/js/main.js"></script>
+  </head>
+
+  <body>
+    <header class="topbar" data-topbar>
+      <div class="container topbar__inner">
+        <a class="brand" href="./index.html" data-nav-link>
+          <img class="brand__logo" src="./assets/img/logo.png" alt="Logo do jogo" width="38" height="38" />
+          <span class="brand__text">
+            <span class="brand__title">M.V.O.S. (Meu Vovô Odeia Sujeira)</span>
+            <span class="brand__tag">Jogue no navegador</span>
+          </span>
+        </a>
+
+        <button class="nav__toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="nav">
+          Menu
+        </button>
+
+        <nav id="nav" class="nav" aria-label="Navegação principal">
+          <a href="./index.html" data-nav-link>Home</a>
+          <a href="./galeria.html" data-nav-link>Galeria</a>
+          <a href="./sobre.html" data-nav-link>Sobre</a>
+          <a href="./jogar.html" aria-current="page" data-nav-link>Jogar</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="section">
+        <div class="container">
+          <header class="section__head reveal">
+            <h1 class="section__title" style="font-size:28px; margin:0;">Jogar</h1>
+            <p class="section__hint">Game rodando + download + tutorial</p>
+          </header>
+
+          <div class="game-wrap">
+            <!--
+              ÁREA DO JOGO
+              - iframe apontando para ./game/c3/index.html (export do Construct 3)
+              - Se o seu export tiver outro arquivo principal, ajuste o src.
+            -->
+            <section class="game reveal" aria-label="Jogo em execução">
+              <div class="game__ratio">
+                <iframe
+                  src="./game/c3/index.html"
+                  title="Jogo - Construct 3"
+                  loading="lazy"
+                  allow="fullscreen"
+                ></iframe>
+              </div>
+            </section>
+
+            <!--
+              AÇÕES + TUTORIAL
+              - Botões e instruções rápidas para apresentação.
+              - Troque as teclas conforme os controles do seu jogo.
+            -->
+            <aside class="card card--padded reveal">
+              <h2 class="section__title" style="margin:0 0 10px;">Baixar e jogar</h2>
+              <div class="actions" style="margin-top:0;">
+                <a class="btn btn--primary" href="./downloads/game.zip" download>
+                  <span class="btn__icon" aria-hidden="true"></span>
+                  Download do jogo
+                </a>
+                <a class="btn" href="./galeria.html">
+                  <span class="btn__icon" aria-hidden="true"></span>
+                  Ver galeria
+                </a>
+              </div>
+
+              <div class="divider"></div>
+
+              <h3 class="section__title" style="margin:0 0 10px; font-size:18px;">Tutorial rápido</h3>
+              <div class="steps">
+                <div class="step">
+                  <strong>Movimentação</strong>
+                  <p>Use <span class="kbd">↑</span><span class="kbd">←</span><span class="kbd">↓</span><span class="kbd">→</span>.</p>
+                </div>
+                <div class="step">
+                  <strong>Interagir</strong>
+                  <p>Aperte <span class="kbd">F</span> para disparar com a arma
+                </div>
+               <!-- <div class="step">
+                  <strong>Lanterna / Habilidade</strong>
+                  <p>Use <span class="kbd">F</span> para alternar a lanterna (se houver).</p>
+                </div> -->
+                <div class="step">
+                  <strong>Objetivo</strong>
+                  <p>Elimine todos os animais infectados.</p>
+                </div>
+              </div>
+            </aside>
+          </div>
+
+          <!--
+            NOTA IMPORTANTE
+            - Ajuda a você lembrar onde colocar o export do Construct 3.
+          -->
+          <article class="card card--padded reveal" style="margin-top:18px;">
+            <h2 class="section__title" style="margin:0 0 8px;">Informações</h2>
+            <div class="prose">
+              <p style="margin:0;">
+                Nessa aba do site, apresento o jogo rodando diretamente no navegador, para que os visitantes possam experimentar sem precisar baixar nada.
+                essa é uma demo do game, mostrando uma ideia inicial de como ele funcionaria.
+              </p>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer__grid">
+        <div>
+          <div>
+          <div><b>M.V.O.S. (Meu Vovô Odeia Sujeira)</b> — Projeto de Faculdade</div>
+          <div style="margin-top:6px;">Aluno: Matheus Vinicius OLiveira Da Silva • Curso: ADS • Ano: 2026</div>
+        </div>
+        </div>
+        <div>
+          <a class="btn" href="./index.html">Voltar para Home</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
+

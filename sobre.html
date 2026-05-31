@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <!--
+      SOBRE (sobre.html)
+      - Página para apresentar você e sua "empresa" (personalidade do projeto).
+      - Estrutura em cards para ficar agradável, moderno e fácil de editar.
+    -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="theme-color" content="#0b0d10" />
+    <title>Projeto do Jogo | Sobre</title>
+    <link rel="stylesheet" href="./style.css" />
+    <script defer src="./assets/js/main.js"></script>
+  </head>
+
+  <body>
+    <header class="topbar" data-topbar>
+      <div class="container topbar__inner">
+        <a class="brand" href="./index.html" data-nav-link>
+          <img class="brand__logo" src="./assets/img/logo.png" alt="Logo do jogo" width="38" height="38" />
+          <span class="brand__text">
+            <span class="brand__title">M.V.O.S. (Meu Vovô Odeia Sujeira)</span>
+            <span class="brand__tag">Sobre o autor e o estúdio</span>
+          </span>
+        </a>
+
+        <button class="nav__toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="nav">
+          Menu
+        </button>
+
+        <nav id="nav" class="nav" aria-label="Navegação principal">
+          <a href="./index.html" data-nav-link>Home</a>
+          <a href="./galeria.html" data-nav-link>Galeria</a>
+          <a href="./sobre.html" aria-current="page" data-nav-link>Sobre</a>
+          <a href="./jogar.html" data-nav-link>Jogar</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="section">
+        <div class="container">
+          <header class="section__head reveal">
+            <h1 class="section__title" style="font-size:28px; margin:0;">Sobre</h1>
+            <p class="section__hint">Quem fez, por que fez e qual a proposta</p>
+          </header>
+
+          <div class="grid-2">
+            <article class="card card--padded reveal">
+              <h2 class="section__title" style="margin:0 0 10px;">Sobre mim</h2>
+              <div class="prose">
+                <p>
+                  Olá! Eu sou <b>Matheus Vinicius OLiveira Da Silva</b>, estudante de <b>Análise e Desenvolvimento de Sistemas</b>.
+                  Este projeto foi criado para praticar design de interfaces, lógica de jogo e desenvolvimento web.
+                </p>
+                <p>
+                  Meu foco aqui foi construir uma experiência curta, mas memorável: Ação, clima e
+                  interação simples, com leitura clara e navegação fluida.
+                </p>
+                <p style="margin-bottom:0;">
+                  Pretendo seguir nessa área, aprendendo cada vez mais sobre desenvolvimento de jogos e web design.
+                  Presar a qualidade e a experiência do usuário é minha prioridade, mesmo em projetos pequenos como este.                
+                </p>
+              </div>
+              <div class="meta">
+                <span class="chip">ADS</span>
+                <span class="chip">Front-end</span>
+                <span class="chip">Game Dev</span>
+                <span class="chip">UI/UX</span>
+              </div>
+            </article>
+
+
+            <article class="card card--padded reveal">
+              <h2 class="section__title" style="margin:0 0 10px;">Sobre o Jogo</h2>
+              <div class="prose">
+                <p>
+                  O <b>M.V.O.S. (Meu Vovô Odeia Sujeira)</b> é um jogo independente fictício criado para este trabalho acadêmico.
+                  A proposta é desenvolver um jogo curto com foco em atmosfera, narrativa ambiental e tensão psicológica.
+                </p>
+              <p>
+                &nbsp;&nbsp;Esse é um game de ação com pequenas doses de comédia, o Protagonista é um senhor de idade que se recusa a abandonar sua casa, mesmo quando o perigo se torna evidente. 
+                Ele é um personagem teimoso, mas também é um sobrevivente astuto, que usa sua experiência e conhecimento do terreno para enfrentar as ameaças que surgem.
+                O cenário é um quintal suburbano que se torna um campo de batalha contra criaturas mutantes, onde o protagonista deve usar sua espingarda e outros objetos improvisados para sobreviver.
+                O objetivo do jogo é sobreviver o máximo possível, limpando o quintal e enfrentando ondas de inimigos cada vez mais desafiadores.
+              </p>
+              </div>
+              <div class="actions">
+                <a class="btn btn--primary" href="./galeria.html">
+                  <span class="btn__icon" aria-hidden="true"></span>
+                  Ver galeria
+                </a>
+                <a class="btn" href="./jogar.html">
+                  <span class="btn__icon" aria-hidden="true"></span>
+                  Jogar
+                </a>
+              </div>
+            </article>
+          </div>
+
+          <!--
+            BLOCO EXTRA: tecnologias / aprendizado
+            - Ótimo para "encher" a apresentação com conteúdo relevante.
+          -->
+          <section class="section" style="padding:18px 0 0;">
+            <div class="grid-3">
+              <article class="card card--padded reveal">
+                <h3 class="section__title" style="margin:0 0 8px; font-size:18px;">Tecnologias</h3>
+                <p class="prose" style="margin:0;">
+                  HTML5, CSS3 e JavaScript no site. Construct 3 no jogo, exportado para web.
+                </p>
+              </article>
+              <article class="card card--padded reveal">
+                <h3 class="section__title" style="margin:0 0 8px; font-size:18px;">Aprendizados</h3>
+                <p class="prose" style="margin:0;">
+                  Layout responsivo, animações leves, acessibilidade e apresentação do projeto.
+                </p>
+              </article>
+              <article class="card card--padded reveal">
+                <h3 class="section__title" style="margin:0 0 8px; font-size:18px;">Próximos passos</h3>
+                <p class="prose" style="margin:0;">
+                  Melhorar fases, adicionar puzzles, otimizar áudio/iluminação e publicar uma versão final.
+                </p>
+              </article>
+            </div>
+          </section>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer__grid">
+        <div>
+          <div><b>Contato</b></div>
+          <div style="margin-top:6px;">
+            Email: <a href="mvos.developer@gmail.com">mvos.developer@gmail.com</a>
+            • Portfólio: <a href="https://github.com/MVOS-DEV">GITHUB</a>
+          </div>
+        </div>
+        <div>
+          <a class="btn" href="./index.html">Voltar para Home</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
+

@@ -1,0 +1,7 @@
+Coloque aqui o export do Construct 3 (Web HTML5).
+
+Depois desta pasta ter um index.html do Construct, o jogo vai aparecer
+automaticamente na aba "Jogar" do site.
+
+Não coloque o export na raiz do projeto (ADS.SITE), senão o navegador
+pode abrir o jogo no lugar do site.

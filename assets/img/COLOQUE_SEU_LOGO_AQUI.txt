@@ -1,0 +1,17 @@
+Logo do site
+============
+
+1) Coloque sua imagem nesta pasta com o nome:
+   logo.png
+
+   (também pode ser .jpg ou .webp — se mudar, edite o src em cada página HTML)
+
+2) O logo aparece no menu de todas as páginas:
+   index.html, galeria.html, sobre.html, jogar.html
+
+   Procure por:
+   <img class="brand__logo" src="./assets/img/logo.png" ... />
+
+3) Tamanho recomendado: 80x80 px ou 128x128 px (quadrado, fundo transparente PNG fica melhor).
+
+4) Depois de trocar a imagem, pressione Ctrl+F5 no navegador para atualizar.

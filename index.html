@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <!--
+      HOME (index.html)
+      - Página inicial para apresentar o jogo: teaser, vídeo do YouTube e história.
+      - Mantém a mesma NAV/FOOTER das outras páginas (consistência).
+    -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="theme-color" content="#0b0d10" />
+    <title>Projeto do Jogo M.V.O.S | Home</title>
+    <link rel="stylesheet" href="./style.css" />
+    <script defer src="./assets/js/main.js"></script>
+  </head>
+
+  <body>
+    <!--
+      TOPBAR / MENU
+      - O atributo data-topbar permite o JS controlar o menu no mobile.
+      - aria-current="page" marca a aba atual (acessibilidade).
+    -->
+    <header class="topbar" data-topbar>
+      <div class="container topbar__inner">
+        <a class="brand" href="./index.html" data-nav-link>
+          <span class="brand__mark" aria-hidden="true">
+            <img src="./assets/img/logo.png" alt="Logo do Jogo" />
+          </span>
+          <span class="brand__text">
+            <span class="brand__title">M.V.O.S. (Meu Vovô Odeia Sujeira)</span>
+            <span class="brand__tag">Ação • Construct 3 • Projeto Faculdade</span>
+          </span>
+        </a>
+
+        <button class="nav__toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="nav">
+          Menu
+        </button>
+
+        <nav id="nav" class="nav" aria-label="Navegação principal">
+          <a href="./index.html" aria-current="page" data-nav-link>Home</a>
+          <a href="./galeria.html" data-nav-link>Galeria</a>
+          <a href="./sobre.html" data-nav-link>Sobre</a>
+          <a href="./jogar.html" data-nav-link>Jogar</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <!--
+        HERO
+        - Área de impacto com chamada, botões e informações rápidas.
+        - Edite o texto e os "chips" para combinar com seu game.
+      -->
+      <section class="hero">
+        <div class="container hero__grid">
+          <article class="card card--padded reveal">
+            <span class="eyebrow"><span class="dot" aria-hidden="true"></span> Apresentação do game</span>
+            <h1>Um senhor aposentado que não tem descanço</h1>
+            <p>
+              Desenvolvido na engine Construct 3, M.V.O.S. coloca você na pele de um homem tentando preservar a sanidade e a segurança do seu lar contra uma ameaça desconhecida e viscosa.
+              O que começou como uma simples tarde no quintal rapidamente se transformou em um pesadelo de sobrevivência. Você está pronto para enfrentar o que está infectando a vida selvagem?
+            </p>
+
+            <div class="actions">
+              <a class="btn btn--primary" href="./jogar.html">
+                <span class="btn__icon" aria-hidden="true"></span>
+                Jogar agora
+              </a>
+              <a class="btn" href="./downloads/seu-jogo.zip" download>
+                <span class="btn__icon" aria-hidden="true"></span>
+                Download
+              </a>
+              <a class="btn btn--ghost" href="#historia">
+                <span class="btn__icon" aria-hidden="true"></span>
+                Ver história
+              </a>
+            </div>
+
+            <div class="meta">
+              <span class="chip">Gênero: Suspense</span>
+              <span class="chip">Plataforma: Web/PC</span>
+              <span class="chip">Engine: Construct 3</span>
+              <span class="chip">Status: Protótipo</span>
+            </div>
+          </article>
+
+          <aside class="hero__aside">
+            <div class="card card--padded reveal">
+              <div class="stat">
+                <div>
+                  <strong>Objetivo</strong>
+                  <span>Exterminar todas as criaturas infectadas do quintal e se proteger.</span>
+                </div>
+                <span class="chip">Singleplayer</span>
+              </div>
+              <div class="divider"></div>
+              <div class="stat">
+                <div>
+                  <strong>Destaque</strong>
+                  <span>Atmosfera, iluminação e dinâmica de combate.</span>
+                </div>
+                <span class="chip">Imersivo</span>
+              </div>
+              <div class="divider"></div>
+              <div class="stat">
+                <div>
+                  <strong>Tempo médio</strong>
+                  <span>10–20 min (demo).</span>
+                </div>
+                <span class="chip">Curto</span>
+              </div>
+            </div>
+
+            <div class="card card--padded reveal">
+              <h2 class="section__title" style="margin:0 0 8px;">Dica rápida</h2>
+              <p class="prose" style="margin:0;">
+                Explore os limites do seu terreno, colete pistas cruciais sobre a origem da infecção e, acima de tudo, sobreviva. 
+                Cada bala conta e cada segundo de hesitação pode ser fatal. Não confie no silêncio
+              </p>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <!--
+        VÍDEO (YouTube)
+        - Substitua o ID do vídeo no src do iframe.
+        - Ex.: https://www.youtube.com/watch?v=SEU_ID -> use apenas SEU_ID
+      -->
+      <section class="section">
+        <div class="container">
+          <header class="section__head reveal">
+            <h2 class="section__title">Trailer / Teaser</h2>
+            <p class="section__hint">Vídeo incorporado do YouTube</p>
+          </header>
+
+          <div class="video reveal" role="region" aria-label="Vídeo do YouTube">
+            <div class="video__ratio">
+              <iframe
+                src="https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ"
+                title="Trailer do jogo"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--
+        HISTÓRIA
+        - Conteúdo textual do enredo (o que o professor espera ver).
+      -->
+      <section class="section" id="historia">
+        <div class="container">
+          <article class="card card--padded reveal">
+            <header class="section__head" style="margin-bottom:10px;">
+              <h2 class="section__title">História</h2>
+              <p class="section__hint">Contexto do universo do game</p>
+            </header>
+            <div class="prose">
+              <p>
+                &nbsp;&nbsp;O silêncio do campo foi rompido por algo que não pertence a este mundo. 
+                Quando uma substância viscosa e radioativa começa a transformar a fauna local em aberrações agressivas, Arthur, um idoso determinado a proteger as únicas memórias que lhe restam, decide que não vai a lugar algum.
+                Armado com sua espingarda e uma paciência que chegou ao limite, ele se torna a última barreira entre o seu lar e uma infestação que ameaça consumir tudo.
+                Você está pronto para limpar esse quintal?. Cada sala tem sinais discretos, e cada escolha deixa rastros.
+              </p>
+              <p>
+                &nbsp;&nbsp;Esse é um game de ação com pequenas doses de comédia, o Protagonista é um senhor de idade que se recusa a abandonar sua casa, mesmo quando o perigo se torna evidente. 
+                Ele é um personagem teimoso, mas também é um sobrevivente astuto, que usa sua experiência e conhecimento do terreno para enfrentar as ameaças que surgem.
+                O cenário é um quintal suburbano que se torna um campo de batalha contra criaturas mutantes, onde o protagonista deve usar sua espingarda e outros objetos improvisados para sobreviver.
+                O conflito central gira em torno da luta do protagonista para proteger seu lar e suas memórias, enquanto enfrenta uma infestação crescente de criaturas hostis. 
+                O objetivo do jogo é sobreviver o máximo possível, limpando o quintal e enfrentando ondas de inimigos cada vez mais desafiadores.
+              </p>
+
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+
+
+    <footer class="footer">
+      <div class="container footer__grid">
+        <div>
+          <div><b>M.V.O.S. (Meu Vovô Odeia Sujeira)</b> — Projeto de Faculdade</div>
+          <div style="margin-top:6px;">Aluno: Matheus Vinicius OLiveira Da Silva • Curso: ADS • Ano: 2026</div>
+        </div>
+        <div>
+          <a class="btn" href="./jogar.html">Ir para Jogar</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
+

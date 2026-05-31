@@ -1,0 +1,17 @@
+Imagem de fundo do site
+========================
+
+1) Coloque sua imagem nesta pasta com o nome:
+   fundo.jpg
+
+   (também funciona: fundo.png ou fundo.webp — se mudar o nome, edite style.css)
+
+2) No arquivo style.css (raiz do projeto), procure por:
+   --bg-image: url("./assets/img/fundo.jpg");
+
+3) Se a imagem ficar clara demais e o texto sumir, escureça mais em:
+   --bg-overlay-top
+   --bg-overlay-bottom
+   (valores perto de 0.9 deixam mais escuro)
+
+Dica: use imagens grandes (ex.: 1920x1080) para não pixelar.

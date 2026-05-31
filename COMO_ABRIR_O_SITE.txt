@@ -1,0 +1,27 @@
+COMO ABRIR O SITE (e não só o jogo)
+===================================
+
+Abra SEMPRE este arquivo no navegador:
+  ADS.SITE\index.html
+
+NÃO abra estes arquivos para ver o site completo:
+  - game\index.html        (é só a área do jogo / redireciona)
+  - game\c3\index.html     (jogo do Construct 3 isolado)
+  - jogar.html             (página do jogo, mas ainda é parte do site)
+
+Se você exportou o Construct 3:
+  1) Exporte como "Web (HTML5)"
+  2) Copie TODOS os arquivos do export para a pasta:  ADS.SITE\game\c3\
+  3) Nunca substitua o index.html da raiz (ADS.SITE\index.html)
+
+Pasta correta do export:
+  ADS.SITE\
+    index.html      <- SITE (Home)  *** ABRA ESTE ***
+    galeria.html
+    sobre.html
+    jogar.html
+    game\
+      index.html    <- ponte (não abrir direto)
+      c3\           <- coloque aqui o export do Construct 3
+        index.html
+        (outros arquivos do export...)
