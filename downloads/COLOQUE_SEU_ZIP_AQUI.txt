@@ -1,8 +1,0 @@
-Coloque aqui o arquivo de download do seu jogo.
-
-Sugestão de nome (para combinar com os links do site):
-- seu-jogo.zip
-
-Depois, se quiser, você pode renomear o arquivo e ajustar o link em:
-- index.html (botão Download)
-- jogar.html (botão Download do jogo)

@@ -1,22 +1,12 @@
 <!doctype html>
 <html lang="pt-br">
   <head>
-    <!--
-      game/index.html
-      - Se você abrir ESTE arquivo direto no navegador, você será enviado para o SITE (Home).
-      - Na aba "Jogar", este arquivo carrega dentro de um iframe (aí o jogo aparece normalmente).
 
-      QUANDO EXPORTAR O CONSTRUCT 3:
-      1) Exporte como Web (HTML5)
-      2) Copie os arquivos do export para a pasta: /game/c3/
-      3) O arquivo principal do jogo deve ficar em: /game/c3/index.html
-      (NÃO substitua o index.html da raiz do site!)
-    -->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>Carregando jogo...</title>
     <script>
-      // Abriu o jogo direto (fora do site)? Volta para a Home do site.
+
       if (window.top === window.self) {
         window.location.replace("../index.html");
       }
@@ -50,10 +40,43 @@
     </div>
 
     <script>
-      // Dentro do iframe (aba Jogar): tenta carregar o export do Construct em game/c3/
       if (window.top !== window.self) {
         window.location.replace("./c3/index.html");
       }
     </script>
   </body>
 </html>
+
+<!--─▄▀▀▀▀▄─█──█────▄▀▀█─▄▀▀▀▀▄─█▀▀▄
+    ─█────█─█──█────█────█────█─█──█
+    ─█────█─█▀▀█────█─▄▄─█────█─█──█
+    ─▀▄▄▄▄▀─█──█────▀▄▄█─▀▄▄▄▄▀─█▄▄▀
+    ────────────────────────────────
+    ─────────▄██████▀▀▀▀▀▀▄
+    ─────▄█████████▄───────▀▀▄▄
+    ──▄█████████████───────────▀▀▄
+    ▄██████████████─▄▀───▀▄─▀▄▄▄──▀▄
+    ███████████████──▄▀─▀▄▄▄▄▄▄────█
+    █████████████████▀█──▄█▄▄▄──────█
+    ███████████──█▀█──▀▄─█─█─█───────█
+    ████████████████───▀█─▀██▄▄──────█
+    █████████████████──▄─▀█▄─────▄───█
+    █████████████████▀███▀▀─▀▄────█──█
+    ████████████████──────────█──▄▀──█
+    ████████████████▄▀▀▀▀▀▀▄──█──────█
+    ████████████████▀▀▀▀▀▀▀▄──█──────█
+    ▀████████████████▀▀▀▀▀▀──────────█
+    ──███████████████▀▀─────█──────▄▀
+    ──▀█████████████────────█────▄▀
+    ────▀████████████▄───▄▄█▀─▄█▀
+    ──────▀████████████▀▀▀──▄███
+    ──────████████████████████─█
+    ─────████████████████████──█
+    ────████████████████████───█
+    ────██████████████████─────█
+    ────██████████████████─────█
+    ────██████████████████─────█
+    ────██████████████████─────█
+    ────██████████████████▄▄▄▄▄█
+    BY MVOS.DEVELOPER
+    -->
