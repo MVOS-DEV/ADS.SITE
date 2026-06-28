@@ -17,6 +17,7 @@ self.C3_GetObjectRefTable = function () {
 		C3.Behaviors.LOS,
 		C3.Plugins.TextBox,
 		C3.Behaviors.Anchor,
+		C3.Plugins.Button,
 		C3.Plugins.Keyboard.Cnds.OnKey,
 		C3.Plugins.Sprite.Acts.Spawn,
 		C3.Plugins.Sprite.Acts.SubInstanceVar,
@@ -24,7 +25,12 @@ self.C3_GetObjectRefTable = function () {
 		C3.Plugins.Sprite.Acts.Destroy,
 		C3.Behaviors.LOS.Cnds.HasLOSToObject,
 		C3.Behaviors.Follow.Acts.FollowObject,
-		C3.Plugins.Sprite.Cnds.OnDestroyed
+		C3.Plugins.System.Cnds.EveryTick,
+		C3.Plugins.TextBox.Acts.SetVisible,
+		C3.Plugins.TextBox.Acts.SetText,
+		C3.Plugins.System.Acts.RestartLayout,
+		C3.Plugins.Button.Cnds.OnClicked,
+		C3.Plugins.System.Acts.GoToLayout
 	];
 };
 self.C3_JsPropNameTable = [
@@ -52,6 +58,7 @@ self.C3_JsPropNameTable = [
 	{Mouse: 0},
 	{Seguir: 0},
 	{BarraDeProgresso: 0},
+	{VIDA: 0},
 	{CentrarEm: 0},
 	{"8Direções": 0},
 	{idoso: 0},
@@ -60,14 +67,12 @@ self.C3_JsPropNameTable = [
 	{Projétil: 0},
 	{DestruirExternamente: 0},
 	{bullet: 0},
-	{vidaGalinha: 0},
 	{CampoDeVisão: 0},
 	{galinha: 0},
 	{GalinhaDeath: 0},
 	{terra: 0},
 	{cerca: 0},
 	{agua: 0},
-	{Sprite: 0},
 	{Âncora: 0},
 	{EntradaDeTexto: 0},
 	{PlanoDeFundoEmBlocos: 0},
@@ -76,7 +81,14 @@ self.C3_JsPropNameTable = [
 	{Porco: 0},
 	{Porcodeath: 0},
 	{RatoDeath: 0},
-	{Rato: 0}
+	{Rato: 0},
+	{EntradaDeTexto2: 0},
+	{PlanoDeFundoEmBlocos2: 0},
+	{EntradaDeTexto3: 0},
+	{Sprite: 0},
+	{Botão: 0},
+	{Sprite2: 0},
+	{Pontos: 0}
 ];
 
 self.InstanceType = {
@@ -109,7 +121,6 @@ self.InstanceType = {
 	terra: class extends self.ITiledBackgroundInstance {},
 	cerca: class extends self.ITiledBackgroundInstance {},
 	agua: class extends self.ITiledBackgroundInstance {},
-	Sprite: class extends self.ISpriteInstance {},
 	EntradaDeTexto: class extends self.ITextInputInstance {},
 	PlanoDeFundoEmBlocos: class extends self.ITiledBackgroundInstance {},
 	VacaDeath: class extends self.ISpriteInstance {},
@@ -117,5 +128,11 @@ self.InstanceType = {
 	Porco: class extends self.ISpriteInstance {},
 	Porcodeath: class extends self.ISpriteInstance {},
 	RatoDeath: class extends self.ISpriteInstance {},
-	Rato: class extends self.ISpriteInstance {}
+	Rato: class extends self.ISpriteInstance {},
+	EntradaDeTexto2: class extends self.ITextInputInstance {},
+	PlanoDeFundoEmBlocos2: class extends self.ITiledBackgroundInstance {},
+	EntradaDeTexto3: class extends self.ITextInputInstance {},
+	Sprite: class extends self.ISpriteInstance {},
+	Botão: class extends self.IButtonInstance {},
+	Sprite2: class extends self.ISpriteInstance {}
 }
